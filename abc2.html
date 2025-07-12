@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mary Hardy – Developer Portfolio</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/yourkitid.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="font-sans antialiased text-gray-800 scroll-smooth">
+    <!-- ===== Navbar ===== -->
+    <header class="bg-white/70 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+      <nav class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+        <!-- Logo -->
+        <a href="#home" class="text-2xl font-bold text-primary">Mary<span class="text-indigo-600">Dev</span></a>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 font-medium">
+          <li><a href="#home" class="hover:text-indigo-600">Home</a></li>
+          <li><a href="#about" class="hover:text-indigo-600">About</a></li>
+          <li><a href="#skills" class="hover:text-indigo-600">Skills</a></li>
+          <li><a href="#resume" class="hover:text-indigo-600">Resume</a></li>
+          <li><a href="#contact" class="hover:text-indigo-600">Contact</a></li>
+        </ul>
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex gap-4">
+          <a href="#contact" class="btn-primary">Hire Me</a>
+          <a href="#blog" class="btn-outline">Blog</a>
+        </div>
+        <!-- Mobile Hamburger -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-2xl focus:outline-none"
+          aria-label="Open Menu"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+      <!-- Mobile Menu Panel -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden border-t bg-white/80 backdrop-blur-lg"
+      >
+        <ul class="flex flex-col gap-4 py-4 px-6">
+          <li><a href="#home" class="block" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#about" class="block" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" class="block" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#resume" class="block" onclick="toggleMenu()">Resume</a></li>
+          <li><a href="#contact" class="block" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white relative"
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
+        <p class="mb-4 text-lg tracking-widest uppercase">Hi, I am</p>
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Mary Hardy</h1>
+        <p class="max-w-2xl mx-auto mb-8 text-lg md:text-xl">
+          Shot what able cold new see hold. Friendly as an betrayed formerly he.
+          Morning because as to society behaved moments.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#" class="btn-primary">Download CV</a>
+          <a href="#contact" class="btn-outline-white">Contact</a>
+        </div>
+      </div>
+      <!-- Vertical "Developer" text -->
+      <div class="hidden lg:block absolute bottom-8 left-8 text-6xl font-bold opacity-20 leading-none select-none">
+        <span class="block">D</span>
+        <span class="block">e</span>
+        <span class="block">v</span>
+        <span class="block">e</span>
+        <span class="block">l</span>
+        <span class="block">o</span>
+        <span class="block">p</span>
+        <span class="block">e</span>
+        <span class="block">r</span>
+      </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="section-title">About Me</h2>
+        <p class="max-w-3xl mx-auto mb-12 text-center">
+          I'm a designer & developer with a passion for web design. I enjoy
+          developing simple, clean and slick websites that provide real value
+          to the end user. Thousands of clients have procured exceptional
+          results while working with me.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Personal Info -->
+          <div>
+            <ul class="space-y-4">
+              <li><strong>Name:</strong> Mary Hardy</li>
+              <li><strong>Email:</strong> <a href="mailto:info@gmail.com" class="text-indigo-600 hover:underline">info@gmail.com</a></li>
+              <li><strong>Date of birth:</strong> 11 November 1987</li>
+              <li><strong>From:</strong> Los Angeles, USA</li>
+            </ul>
+          </div>
+          <!-- Illustration / Image placeholder -->
+          <div class="flex items-center justify-center">
+            <img
+              src="https://source.unsplash.com/random/400x400?woman,developer"
+              alt="Mary Hardy portrait"
+              class="rounded-2xl shadow-lg w-72 h-72 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+    <section id="skills" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="section-title">What I do</h2>
+        <p class="max-w-3xl mx-auto mb-12 text-center">
+          I have more than 10 years experience building software for clients all
+          over the world. Below is a quick overview of my main technical skill
+          sets and technologies I use.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Skill Card -->
+          <div class="skill-card">
+            <i class="fab fa-js text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Vanilla JavaScript</h3>
+            <p class="text-sm leading-relaxed">
+              List skill/technologies here. You can change the icon above to any
+              of the 1500+ FontAwesome icons available. Aenean commodo ligula
+              eget dolor.
+            </p>
+          </div>
+          <!-- Duplicate for other skills -->
+          <div class="skill-card">
+            <i class="fab fa-react text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">React</h3>
+            <p class="text-sm leading-relaxed">
+              List skill/technologies here. You can change the icon above to any
+              of the 1500+ FontAwesome icons available. Aenean commodo ligula
+              eget dolor.
+            </p>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-node-js text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Node.js</h3>
+            <p class="text-sm leading-relaxed">
+              List skill/technologies here. You can change the icon above to any
+              of the 1500+ FontAwesome icons available. Aenean commodo ligula
+              eget dolor.
+            </p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-database text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">MongoDB</h3>
+            <p class="text-sm leading-relaxed">
+              List skill/technologies here. You can change the icon above to any
+              of the 1500+ FontAwesome icons available. Aenean commodo ligula
+              eget dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Resume Section ===== -->
+    <section id="resume" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="section-title">A summary of My Resume</h2>
+        <div class="grid md:grid-cols-2 gap-12 mt-12">
+          <!-- Education -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6">My Education</h3>
+            <div class="space-y-6">
+              <div class="resume-item">
+                <h4 class="font-semibold">Master in Computer Engineering</h4>
+                <span class="text-sm text-gray-500">Harvard University / 2015 - 2017</span>
+                <p class="mt-2 text-sm">
+                  List skill/technologies here. You can change the icon above to
+                  any of the 1500+ FontAwesome icons available.
+                </p>
+              </div>
+              <!-- Repeat for other education entries -->
+            </div>
+          </div>
+          <!-- Experience -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6">My Experience</h3>
+            <div class="space-y-6">
+              <div class="resume-item">
+                <h4 class="font-semibold">Sr. Front End Developer</h4>
+                <span class="text-sm text-gray-500">Apple Inc / 2020 - Current</span>
+                <p class="mt-2 text-sm">
+                  List skill/technologies here. You can change the icon above to
+                  any of the 1500+ FontAwesome icons available.
+                </p>
+              </div>
+              <!-- Repeat for other experience entries -->
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="#" class="btn-primary">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="max-w-3xl mx-auto mb-12 text-center">
+          Please fill out the form to contact me or call between 9:00 A.M and
+          8.00 P.M ET, Monday through Friday.
+        </p>
+        <form class="max-w-2xl mx-auto grid gap-6">
+          <input
+            type="text"
+            placeholder="Your name"
+            class="input-field"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your email"
+            class="input-field"
+            required
+          />
+          <textarea
+            rows="5"
+            placeholder="Message"
+            class="input-field"
+            required
+          ></textarea>
+          <button type="submit" class="btn-primary w-40 mx-auto">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-800 text-gray-300 py-6 text-center">
+      <p>&copy; 2025 Mary Hardy. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== Helpers & Interactivity ===== -->
+    <style>
+      /* Custom utility classes */
+      .btn-primary {
+        @apply inline-block bg-indigo-600 text-white px-6 py-2 rounded-full shadow hover:bg-indigo-700 transition;
+      }
+      .btn-outline {
+        @apply inline-block border border-indigo-600 text-indigo-600 px-6 py-2 rounded-full hover:bg-indigo-600 hover:text-white transition;
+      }
+      .btn-outline-white {
+        @apply inline-block border border-white text-white px-6 py-2 rounded-full hover:bg-white hover:text-indigo-600 transition;
+      }
+      .section-title {
+        @apply text-4xl font-bold text-center mb-6;
+      }
+      .skill-card {
+        @apply bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center;
+      }
+      .resume-item {
+        @apply bg-white p-6 rounded-xl shadow;
+      }
+      .input-field {
+        @apply w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:outline-none;
+      }
+    </style>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      function toggleMenu() {
+        mobileMenu.classList.toggle("hidden");
+      }
+      menuBtn.addEventListener("click", toggleMenu);
+    </script>
+  </body>
+</html>
